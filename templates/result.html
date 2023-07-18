@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Approval Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #008000;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #008000;
+        }
+
+        .content {
+            width: 500px;
+            padding: 20px;
+            background-color: #008000;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #bf1313;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Credit Card Approval Prediction Result</h1>
+            <div class="result">
+                {% if prediction %}
+                    {% if prediction == 'Approved' %}
+                        <p>Your credit card application has been <strong>Approved</strong>!</p>
+                    {% else %}
+                        <p>Your credit card application has been <strong>Not Approved</strong>.</p>
+                    {% endif %}
+                {% else %}
+                    <p>No prediction result available.</p>
+                {% endif %}
+            </div>
+            <div class="back-button">
+                <a href="/" style="color: white;">Go Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
